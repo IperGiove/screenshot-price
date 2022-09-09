@@ -92,8 +92,8 @@ function make_plot(df)
         y = :price, 
         kind = "bar",
         text = :price,
-        texttemplate="%{text:.2s}",
-        textposition="inside",
+        textposition = "auto",
+        textfont = attr(size=14, color=:black),
         marker = attr(
             showscale = true, 
             coloraxis = "coloraxis", 

@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
 from selenium import webdriver
 from omegaconf import OmegaConf
 import time
 import os
 
-DIR = os.getcwd().replace("build/exe.linux-x86_64-3.9", "")
+DIR = os.getcwd().replace("/build/exe.linux-x86_64-3.9/", "")
 CFG = OmegaConf.load(f'{DIR}/config/linkedin.yaml')
-
 
 
 def login(driver: webdriver) -> None:
@@ -27,7 +27,9 @@ def upload_image(driver: webdriver) -> None:
 
 
 def main() -> None:
-    driver = webdriver.Firefox()
+    options = Options()
+    options.add_argument('--headless')
+    driver = webdriver.Firefox(options=options)
     login(driver)
     upload_image(driver)
     driver.quit()

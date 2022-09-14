@@ -16,6 +16,7 @@ BINANCE:
   price: 
     endpoint: /ticker/price
     price_data: price
+    pair_definition: symbol
   query: symbol
   pairs_merge: ""
   where_data: null
@@ -26,6 +27,7 @@ FTX:
   price: 
     endpoint: /markets/
     price_data: price
+    pair_definition: name
   query: null
   pairs_merge: /
   where_data: result
@@ -36,6 +38,7 @@ BITPANDA:
   price:
     endpoint: /price-ticks/
     price_data: price
+    pair_definition: instrument_code
   query: null
   pairs_merge: _
   where_data: 1
@@ -46,6 +49,7 @@ BITSTAMP:
   price:
     endpoint: /ticker/
     price_data: last
+    pair_definition: pair
   query: null
-  pairs_merge: ""
-  where_data: 2
+  pairs_merge: "/"
+  where_data: 1

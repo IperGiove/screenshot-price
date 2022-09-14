@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from omegaconf import OmegaConf
 import time
@@ -30,7 +33,9 @@ def upload_image(driver: webdriver) -> None:
 def main() -> None:
     options = Options()
     options.add_argument('--headless')
-    driver = webdriver.Firefox(options=options)
+    #driver = webdriver.Firefox(options=options)
+    service = Service(executable_path=ChromeDriverManager().install())
+    driver = webdriver.Chrome(options=options, service=service)
     login(driver)
     upload_image(driver)
     driver.quit()

@@ -1,3 +1,8 @@
+#config
 **linkedin.yaml
-**build
+
+#executable
+**build*
+
+#drivers
 **geckodriver.log

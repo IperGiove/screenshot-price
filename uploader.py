@@ -5,6 +5,7 @@ from omegaconf import OmegaConf
 import time
 import os
 
+
 DIR = os.getcwd().replace("/build/exe.linux-x86_64-3.9/", "")
 CFG = OmegaConf.load(f'{DIR}/config/linkedin.yaml')
 

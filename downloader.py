@@ -8,7 +8,6 @@ import os
 
 DIR = os.getcwd()#.replace("/build/exe.linux-x86_64-3.9/", "")
 CFG = OmegaConf.load(f'{DIR}/config/host.yaml')
-DATE = ...
 
 
 async def run_parallel(*functions: Awaitable[Any]) -> None:
@@ -90,9 +89,9 @@ def cleaning_data(row_datas: list) -> pd.DataFrame:
 
     for exchange, row_data in zip(CFG["exchanges"], row_datas):
         price, pair = preprocessing(exchange, row_data)
-        data.loc[len(data.index)] = [exchange, price, pair]
+        data.loc[len(data.index)] = [exchange, pair, price]
     
-    return data
+    return data.sort_values(by=["price"])
 
 
 async def main() -> pd.DataFrame:

@@ -6,7 +6,7 @@ import asyncio
 import os
 
 
-DIR = os.getcwd()#.replace("/build/exe.linux-x86_64-3.9/", "")
+DIR = os.getcwd().replace("/build/exe.linux-x86_64-3.9/", "")
 CFG = OmegaConf.load(f'{DIR}/config/host.yaml')
 
 

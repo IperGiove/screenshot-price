@@ -13,7 +13,7 @@ DATE = datetime.datetime.now(
 def make_plot(data: pd.DataFrame) -> px.bar:
     fig = px.bar(
         data, 
-        title = f"BTCEUR Arbitrage Opportunity at {DATE} UTC",
+        title = f"BTCEUR Arbitrage Opportunity at {DATE} UTC ",
         x = "exchange", 
         y = "price", 
         color = "price",

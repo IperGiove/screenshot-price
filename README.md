@@ -10,7 +10,7 @@ Exchange considered at the moment:
 
 
 Image example:
-![alt text](https://github.com/ipergiove/screenshot-price/blob/plots/image.jpg)
+![alt text](https://github.com/ipergiove/screenshot-price/blob/main/plots/BTCEUR.png)
 
 
 ## Installation

@@ -9,6 +9,9 @@ Exchange considered at the moment:
 - BITSTAMP
 
 
+Image example:
+![alt text](https://github.com/ipergiove/screenshot-price/blob/plots/image.jpg)
+
 
 ## Installation
 Python 3.10 is used

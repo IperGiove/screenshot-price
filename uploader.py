@@ -26,6 +26,7 @@ def upload_image(driver: webdriver) -> None:
     driver.find_element(By.XPATH, "//input[@type='file']").send_keys(f"{DIR}/plots/BTCEUR.png")
     time.sleep(2) #wait to upload the plot 
     driver.find_element(By.XPATH, "//button[@class='background-image-cropper__apply-action artdeco-button artdeco-button--2 artdeco-button--primary ember-view']").click()
+    time.sleep(2) #wait to upload the plot 
 
 
 def main() -> None:
